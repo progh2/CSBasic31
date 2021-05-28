@@ -55,11 +55,11 @@ namespace CBasic4
             Random random = new Random();
             Console.WriteLine(random.Next());
             Console.WriteLine(random.Next(100));
-            Console.WriteLine(random.Next(10,100));
+            Console.WriteLine(random.Next(10, 100));
 
             Console.WriteLine(random.NextDouble());
             Console.WriteLine(random.NextDouble());
-            Console.WriteLine(random.NextDouble()* 100);
+            Console.WriteLine(random.NextDouble() * 100);
 
             List<int> list = new List<int>();
             list.Add(52);
@@ -86,7 +86,7 @@ namespace CBasic4
 
             Product product = new Product();
             Console.WriteLine(product);
-            Product productA = new Product() { name="감자", price=2000 };
+            Product productA = new Product() { name = "감자", price = 2000 };
             Console.WriteLine(productA);
             Product productB = new Product() { name = "고구마", price = 3000 };
             Console.WriteLine(productB);
@@ -111,7 +111,23 @@ namespace CBasic4
                 new Student() { name = "구지연", grade = 1 },
                 new Student() { name = "김연화", grade = 2 },
                 new Student() { name = "함기훈", favorityFood = "밀크티" }
-        };  
+            };
+
+            foreach (var item in students)
+                Console.WriteLine(item.name + " : " + item.grade);
+            /*
+            for (int i = 0; i < students.Count; i++)
+                if (students[i].grade > 0) {
+                    students.RemoveAt(i);
+                    i--;
+                }
+            */
+            for( int i = students.Count - 1 ; i >= 0; i--)
+                if (students[i].grade > 0)
+                    students.RemoveAt(i);
+
+                    foreach (var item in students)
+                Console.WriteLine(item.name + " : " + item.grade);
 
         }
     }
