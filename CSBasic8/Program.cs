@@ -8,6 +8,31 @@ namespace CSBasic8
 {
     class Program
     {
+        class Parent{}
+        class Child : Parent, IDisposable, IComparable
+        {
+            public int CompareTo(object obj)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        class TestClass : IBasic
+        {
+            public int TestProperty { 
+                get => 0; 
+                set => throw new NotImplementedException(); }
+
+            public int TestInstanceMethod()
+            {
+                throw new NotImplementedException();
+            }
+        }
         class Dummy : IDisposable
         {
             public void Dispose()
@@ -34,6 +59,11 @@ namespace CSBasic8
 
         static void Main(string[] args)
         {
+            Child child = new Child();
+            Parent childAsParent = new Child();
+            IDisposable childAsDisposable = new Child();
+            IComparable childAsComparable = new Child();
+
             using (Dummy dummy = new Dummy())
             {
                 Console.WriteLine("뭔가 작업을 했음. 주절주절");
