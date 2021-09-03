@@ -35,7 +35,7 @@ namespace CSBasic8_label
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 331);
+            this.ClientSize = new System.Drawing.Size(984, 331);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
