@@ -40,9 +40,9 @@ namespace BookManager
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -149,10 +149,14 @@ namespace BookManager
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(BookManager.User);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "사용자ID";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.Width = 150;
@@ -160,14 +164,10 @@ namespace BookManager
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "사용자 이름";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(BookManager.User);
             // 
             // FormUser
             // 
@@ -192,8 +192,6 @@ namespace BookManager
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnDelete;
@@ -203,5 +201,7 @@ namespace BookManager
         private System.Windows.Forms.TextBox tbUserID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }
