@@ -18,7 +18,7 @@ namespace BookManager
             Load();
         }
 
-        private static void Load()
+        public static void Load()
         {
             try
             {
@@ -51,7 +51,7 @@ namespace BookManager
             }
         }
 
-        private static void Save()
+        public static void Save()
         {
             string booksOutput = "";
             booksOutput += "<books>\n";
